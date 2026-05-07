@@ -1,7 +1,7 @@
 include:
   # 1. The Prospector Dongle (XIAO BLE)
   - board: xiao_ble
-    shield: prospector_adapter totem_left
+    shield: totem_left prospector_adapter
     cmake-args: -DCONFIG_ZMK_SPLIT_ROLE_CENTRAL=y -DMIRYOKU_MAPPING=TOTEM
     
   # 2. Totem Left Half (Peripheral)
