@@ -6,7 +6,6 @@ jobs:
     secrets: inherit
     with:
       include: |
-        # 1. The Prospector Dongle (Central)
         - board: xiao_ble
           shield: prospector_adapter totem_left
           kconfig: |
@@ -15,14 +14,12 @@ jobs:
             CONFIG_PROSPECTOR_USE_AMBIENT_LIGHT_SENSOR=n
           cmake_args: -DMIRYOKU_MAPPING=TOTEM
 
-        # 2. Totem Left (Peripheral)
         - board: xiao_ble
           shield: totem_left
           kconfig: |
             CONFIG_ZMK_SPLIT_ROLE_CENTRAL=n
           cmake_args: -DMIRYOKU_MAPPING=TOTEM
 
-        # 3. Totem Right (Peripheral)
         - board: xiao_ble
           shield: totem_right
           kconfig: |
